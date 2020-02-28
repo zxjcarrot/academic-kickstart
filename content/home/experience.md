@@ -18,27 +18,45 @@ date_format = "Jan 2006"
 #   Leave `date_end` empty if it's your current employer.
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
 [[experience]]
-  title = "CEO"
-  company = "GenCoin"
-  company_url = ""
-  location = "California"
-  date_start = "2017-01-01"
-  date_end = ""
-  description = """
+  title = "Software Engineer Intern"
+  company = "Alibaba Cloud"
+  company_url = "https://www.alibabacloud.com/"
+  location = "Hangzhou"
+  date_start = "2019-08-01"
+  date_end = "2019-09-30"
+  description = """  
   Responsibilities include:
   
-  * Analysing
-  * Modelling
-  * Deploying
+  * Designing and implementing I/O optimizations for redo logging of MySQL on Optane DC Persistent Memory
   """
 
 [[experience]]
-  title = "Professor"
-  company = "University X"
-  company_url = ""
-  location = "California"
-  date_start = "2016-01-01"
-  date_end = "2016-12-31"
-  description = """Taught electronic engineering and researched semiconductor physics."""
+  title = "Remote Software Engineer Intern"
+  company = "DolphinDB Inc."
+  company_url = "https://www.dolphindb.com/"
+  location = "Hangzhou"
+  date_start = "2017-05-01"
+  date_end = "2018-12-31"
+  description = """  
+  Responsibilities include:
+  
+  * Designing and implementing the distributed file system tailored for DolphinDB which is a timeseries database system
+  * Designing and implementing a prototype of Just-in-Time compilation framework for the scripting language of DolphinDB
+  * Designing and implementing a set of cache-conscious data strucures including queue, hashmap and their concurrent versions
+  """ 
 
+[[experience]]
+  title = "Master Student"
+  company = "Zhejiang University"
+  company_url = ""
+  location = "Hangzhou"
+  date_start = "2017-09-01"
+  date_end = "2020-03-31"
+  description = """
+  Responsibilities:
+
+  * Researching in index structures on persistent memory
+  * Researching in write optimzied key value stores
+  * Teaching assistant for Operating Systems
+  """
 +++
