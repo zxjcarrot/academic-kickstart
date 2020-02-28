@@ -60,4 +60,4 @@ user_groups:
 - Researchers
 - Visitors
 ---
-I am a master student in Computer Science at Zhejiang University. My research interests include database systems, operating systems, and distributed systems. I have done two intenships as a software engineer in DolphinDB and Alibaba Cloud. After graduation, I will join the TXSQL kernel team of Tencent Cloud as a software engineer.
+I am a master student in Computer Science at Zhejiang University. My research interests include database systems, operating systems, and distributed systems. I have done two internships as a software engineer in DolphinDB and Alibaba Cloud. After graduation, I will join the TXSQL kernel team of Tencent Cloud as a software engineer.
