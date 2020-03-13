@@ -27,10 +27,10 @@ interests:
 
 education:
   courses:
-  - course: M.Eng in Computer Science
+  - course: M.Eng. in Computer Science
     institution: Zhejiang University
     year: 2020
-  - course: B.Eng in Software Engineering
+  - course: B.Eng. in Software Engineering
     institution: Hangzhou Dianzi University
     year: 2017
 
