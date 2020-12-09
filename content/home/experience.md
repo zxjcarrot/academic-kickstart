@@ -17,6 +17,16 @@ date_format = "Jan 2006"
 #   Required fields are `title`, `company`, and `date_start`.
 #   Leave `date_end` empty if it's your current employer.
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
+
+[[experience]]
+  title = "Software Engineer"
+  company = "Tencent"
+  company_url = "https://cloud.tencent.com/"
+  location = "Shanghai"
+  date_start = "2020-04"
+  date_end = "present"
+  description = """"""
+
 [[experience]]
   title = "Software Engineer Intern"
   company = "Alibaba Cloud"
