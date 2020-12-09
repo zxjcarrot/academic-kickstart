@@ -18,7 +18,7 @@ organizations:
   url: ""
 
 # Short bio (displayed in user profile at end of posts)
-bio: I am a software engineer of TXSQL team at Tencent Inc. My research interests include database systems, operating systems, and distributed systems. I have done two internships as a software engineer in DolphinDB and Alibaba Cloud.
+bio: I am a software engineer of TXSQL team at Tencent Inc. My research interests include database systems, operating systems, and distributed systems. Currently, I am applying for doctoral study in data systems, focusing on improving data system efficiency and data systems with modern hardware. 
 
 interests:
 - Database Systems
@@ -60,4 +60,4 @@ user_groups:
 - Researchers
 - Visitors
 ---
-I am a software engineer of TXSQL team at Tencent Inc. My research interests include database systems, operating systems, and distributed systems. I have done two internships as a s    oftware engineer in DolphinDB and Alibaba Cloud.
+I am a software engineer of TXSQL team at Tencent Inc. My research interests include database systems, operating systems, and distributed systems. Currently, I am applying for docto    ral study in data systems, focusing on improving data system efficiency and data systems with modern hardware.
