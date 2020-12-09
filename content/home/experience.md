@@ -23,8 +23,7 @@ date_format = "Jan 2006"
   company = "Tencent"
   company_url = "https://cloud.tencent.com/"
   location = "Shanghai"
-  date_start = "2020-04"
-  date_end = "present"
+  date_start = "2020-04-14"
   description = """N/A"""
 
 [[experience]]
