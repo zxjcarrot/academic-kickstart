@@ -25,7 +25,7 @@ date_format = "Jan 2006"
   location = "Shanghai"
   date_start = "2020-04"
   date_end = "present"
-  description = """"""
+  description = """N/A"""
 
 [[experience]]
   title = "Software Engineer Intern"
