@@ -10,10 +10,3 @@ publication: "*Proc. VLDB Endow.*"
 url_pdf: "https://doi.org/10.14778/3372716.3372717"
 doi: "10.14778/3372716.3372717"
 ---
-title: "Spitfire: A Three-Tier Buffer Manager for Volatile and Non-Volatile Memory(Revision submitted)"
-authors: ["Xinjing Zhou", "Joy Arulraj", "Andrew Pavlo", "David Conhen"]
-publication_types: ["1"]
-abstract: ""
-featured: true
-publication: "*SIGMOD 2021*"
----
