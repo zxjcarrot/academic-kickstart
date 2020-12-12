@@ -60,4 +60,4 @@ user_groups:
 - Researchers
 - Visitors
 ---
-I am a software engineer of TXSQL team at Tencent Inc. My research interests include database systems, operating systems, and distributed systems. Currently, I am applying for docto    ral study in data systems, focusing on improving systems efficiency and systems with modern hardware.
+I am a software engineer of TXSQL team at Tencent Inc. My research interests include database systems, operating systems, and distributed systems. Currently, I am applying for doctoral study in data systems, focusing on improving systems efficiency and systems with modern hardware.
