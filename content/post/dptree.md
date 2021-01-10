@@ -37,7 +37,7 @@ In-place merge的核心在于针对base tree的每个叶子节点，我们存储
 3. **Hash-based + Fingerprinting Leaf Design** 我们知道base tree叶子节点内进行顺序查询平均情况下需要读取一半的数据才能完成查询。为进一步加速叶子节点内的查询，我们将KV数组以hash table的形式进行组织，hash冲突解决采用linear probing的方式，对cache极其友好。同时DPTree借鉴了FPTree的fingerprinting技术。在Figure 3中，元数据信息中为每个key维护了1 byte大小的指纹信息，查询时先比对元数据的key的指纹信息，这样能够在key不存在的情况下进一步减少查询代价(大部分情况下不需要访问KV数组)。两种优化组合保证了大部分情况下successful lookup只需要两次cache-miss，unsuccessful lookup只需要一次cache-miss。同时linear probing的hash组织结构让fingerprint的检查也再次减少(FPTree中KV数组是无序的，需要线性扫描)。
 4. **Accelerating Range Queries using Order Array** 现有NVM索引的leaf节点大多都采用无序存储(FPTree, BzTree)，这样执行range查询，即有序输出一个范围里的KV数据，需要首先执行sorting，因此导致range查询代价较高。DPTree吸纳wB<sup>+</sup>-Trees的设计思想，在元数据中加入了一个小索引数组(order array, O)，用于表示KV数组的内的数据顺序，以加速range查询。即KV[O[0]]表示了key最小的数据，KV[O[1]]表示了key第二小的数据，以此类推。
 
-经过这一系列的读优化，实验表明，DPTree的点读延迟是最低的，同时range查询也只比叶节点有序存储的B树(fastfair<sup>[7]</sup>)略差。注意到在base tree的这些读优化技术引入了更多的元数据，但是NVM写入代价依旧能够做到很低，这还是要归功于批量更新和in-place合并，让DPTree能够以很低的NVM写入代价来加速读，使得DPTree整体在读和写方面表现得都非常优秀。
+经过这一系列的读优化，实验表明，DPTree的点读延迟是最低的，同时range查询也只比叶节点有序存储的B树(fastfair<sup>[7]</sup>)略差。注意到在base tree的这些读优化技术引入了更多的元数据，但是NVM写入代价依旧能够做到很低，这还是要归功于批量更新和in-place合并，让DPTree能够以很低的NVM写入代价来引入更多对读有帮助的元数据，使得DPTree整体在读和写方面表现得都非常优秀。
 
 ## 总结
 DPTree的核心思想是批量更新和原地合并来降低元数据的更新代价，使用两级数据结构来构造一个索引结构。DPTree为了弥补两级结构带来的读延迟增加，引入了许多读优化技术，将读延迟做到了现有索引结构中最低，同时保持最少的NVM写入次数，这归功于批量更新和原地合并技巧。当然本文只是DPTree一个简单的介绍，对于具体合并步骤实现和以及并发DPTree的等复杂设计，感兴趣的同学可以再看下原论文。这里分别再给出[代码](https://github.com/zxjcarrot/DPTree-code)和[VLDB会议录屏](https://www.bilibili.com/video/BV1sa4y1J76f/)，希望对感兴趣的同学有帮助，也欢迎大家多多指正不足，第一次写论文，自认为写作和presentation还是很烂的。
