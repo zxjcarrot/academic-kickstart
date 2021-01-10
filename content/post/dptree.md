@@ -1,4 +1,12 @@
 > 应好友[胡神](http://conanhujinming.github.io)邀请(a.k.a, push)，写篇文章讲下[DPTree](http://www.vldb.org/pvldb/vol13/p421-zhou.pdf)的核心思想和来源。
+- [背景](#背景)
+- [灵感来源: Hybrid Index](#灵感来源-hybrid-index)
+- [DPTree: 写优化NVM索引结构](#dptree-写优化nvm索引结构)
+	- [In-Place Merge](#in-place-merge)
+	- [读优化](#读优化)
+- [总结](#总结)
+	- [感想](#感想)
+- [参考文献](#参考文献)
 ## 背景
 2019年4月，Intel的Optane DC PMM商用了，数据库领域研究了几十年的NVM终于有真实NVM硬件可以用了，研究者们也是喜大普奔。如学术界预测，实际NVM硬件存在着读写性能不对称的问题，即读带宽要高于写带宽。在Optane DC PMM上，单DIMM的读写带宽差距高达3倍<sup>[6]</sup>。同时这么多年的NVM相关研究中，索引结构对于数据系统来说是一个非常重要的组件，NVM研究领域中里其实已非常多的索引结构相关研究了，例如CDDS-Tree<sup>[1]</sup>, FPTree<sup>[2]</sup>, wB<sup>+</sup>-Trees<sup>[3]</sup>, BzTree<sup>[4]</sup>等等，这些工作提出了很多有用的NVM索引设计技巧，但是在NVM写入优化方面没有研究的非常透彻。不同于这些工作，DPTree是一种针对写优化的NVM索引结构，缓解现有NVM硬件下的写性能较差问题，同时也采用了很多前人的NVM索引设计技巧。
 
