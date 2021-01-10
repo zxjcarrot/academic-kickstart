@@ -17,7 +17,7 @@ Hybrid Index的Motivation在于降低内存索引结构的空间开销，方法�
 
 注意到这里DPTree的buffer tree虽然采用了logging，但是针对NVM做出了优化，能够做到单条cache-line大小日志的只需要接近一次的NVM顺序写入，对细节感兴趣的同学可以读下论文2.1部分。
 ### In-Place Merge
-在处理buffer合入base的过程中，我们当然可以直接采用LSMT的out-of-place这种简单的合并方式，但是我们发现这种out-of-place合并方式可能会产生1/R的NVM写入放大，并不会比传统NVM索引结构有更好的写入改善。我们注意到这种out-of-place的合并方式其实是适合block-storage的，如HDD/SSD这类无法进行按字节寻址的设备。但是NVM的是可以按字节寻址，因此DPTree设计了一种in-place merge方式，来利用NVM这种独特的性质降低写入量。
+在处理buffer合入base的过程中，我们当然可以直接采用LSMT的out-of-place这种简单的合并方式，但是我们发现这种out-of-place合并方式可能会产生1/R的NVM写入放大，并不会比传统NVM索引结构有更好的写入改善。我们注意到这种out-of-place的合并方式其实是适合block-storage的，如HDD/SSD这类无法进行按字节寻址的设备，并没有利用上NVM可以按字节寻址这个特性。因此DPTree设计了一种in-place merge方式，来利用NVM这种独特的性质降低写入量。
 
 ![image](/img/base-leaf.jpg)
 In-place merge的核心在于针对base tree的每个叶子节点，我们存储两份元数据信息，并由一个全局布尔变量gv来表示当前base tree的叶子节点使用哪一份分元数据。如Figure 3所示，base tree的叶子节点由两份元数据和一个KV数组组成。其中元数据中包含了诸如下一个叶子节点指针（用于range遍历)，bitmap（用于表示kv pool的kv分配状态），cnt(该元数据版本下节点中KV数量），以及一些用于加速读操作的元数据(下一节介绍)。
