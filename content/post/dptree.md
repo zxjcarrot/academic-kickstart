@@ -1,4 +1,4 @@
-> 应好友[胡神](http://conanhujinming.github.io)邀请(a.k.a. push)，写篇文章讲下[DPTree](http://www.vldb.org/pvldb/vol13/p421-zhou.pdf)的核心思想和来源。
+> 应好友[胡神](http://conanhujinming.github.io)疯狂邀请(a.k.a. push)，写篇文章讲下[DPTree](http://www.vldb.org/pvldb/vol13/p421-zhou.pdf)。
 - [背景](#背景)
 - [灵感来源: Hybrid Index](#灵感来源-hybrid-index)
 - [DPTree: 写优化NVM索引结构](#dptree-写优化nvm索引结构)
