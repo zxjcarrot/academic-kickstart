@@ -10,7 +10,7 @@ authors:
 superuser: true
 
 # Role/position
-role: Master student of Database Systems
+#role: Master student of Database Systems
 
 # Organizations/Affiliations
 organizations:
@@ -18,7 +18,7 @@ organizations:
   url: ""
 
 # Short bio (displayed in user profile at end of posts)
-bio: I am a software engineer of TXSQL team at Tencent Inc. My research interests include database systems, operating systems, and distributed systems. Currently, I am focusing on improving data system efficiency and systems with modern hardware. 
+bio: My research interests include database systems, operating systems, and distributed systems. Currently, I am focusing on improving data system efficiency and systems with modern hardware. 
 
 interests:
 - Database Systems
@@ -60,4 +60,4 @@ user_groups:
 - Researchers
 - Visitors
 ---
-I am a software engineer of TXSQL team at Tencent Inc. My research interests include database systems, operating systems, and distributed systems. Currently, I am focusing on improving systems efficiency and systems with modern hardware.
+My research interests include database systems, operating systems, and distributed systems. Currently, I am focusing on improving systems efficiency and systems with modern hardware.

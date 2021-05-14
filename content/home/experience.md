@@ -23,8 +23,9 @@ date_format = "Jan 2006"
   company = "Tencent"
   company_url = "https://cloud.tencent.com/"
   location = "Shanghai"
-  date_start = "2020-04-14"
-  description = """N/A"""
+  date_start = "2020-04-15"
+  date_end = "2021-03-12"
+  description = """Software Engineering on Cloud Database Systems"""
 
 [[experience]]
   title = "Software Engineer Intern"
@@ -64,8 +65,8 @@ date_format = "Jan 2006"
   description = """
   Responsibilities:
 
-  * Researching in index structures on persistent memory
-  * Researching in write optimzied key value stores
+  * Research on index structures on persistent memory
+  * Research on write optimzied key value stores
   * Teaching assistant for Operating Systems
   """
 +++
